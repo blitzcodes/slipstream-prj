@@ -1,0 +1,11 @@
+/*-------------------------
+Flie: _defaults.lessimport
+Created: 2013-02-27 9:17PM EST
+Author: Sean 'Blitz' Homer
+
+Default:
+Default Less varibles & fucntions to be leveraged throughout the asset files.
+-------------------------*/
+
+@colorBlack: #000;
+@colorWhite: #fff;

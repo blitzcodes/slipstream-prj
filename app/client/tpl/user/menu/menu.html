@@ -1,0 +1,21 @@
+<template name="userMenu">
+    <h1>Login</h1>
+    {{#if currentUser}}
+        <h2>Logged in as {{currentUser.username}}</h2>
+        <p>
+            <button id="logout">Logout</button>
+        </p>
+    {{else}}
+        {{#if loggingIn}}
+            <p>Logging in...</p>
+        {{else}}
+            {{#if creatingAccount}}
+                {{> userCreate}}
+                <p class="showLogin"> (Login) </p>
+            {{else}}
+                {{> userLogin}}
+                <p class="showCreateAccount"> (Create Account) </p>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+</template>

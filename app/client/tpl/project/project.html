@@ -1,0 +1,72 @@
+<template name="projectCreate">
+    <section class="row-fluid">
+        <div class="span8 offset2">
+            <header>
+                Project Entry
+            </header>
+            <form id="projectsCreateForm">
+                <p>
+                    {{toHtml inputs.title}}<br />
+                    {{toHtml inputs.desc}}
+                    <b>All Inputs</b>
+                    {{#each inputs }}
+                        {{toHtml this}}
+                    {{/each}}
+                </p>
+                <p>
+                    <button id="btnCreate" class="btn btn-primary">Create</button>
+                </p>
+            </form>
+            {{> errors}}
+        </div>
+    </section>
+</template>
+
+<template name="projectView">
+    <h4>
+        {{values.title}} - {{values.author}}<br/>
+        <small>{{values.slug}}</small>
+    </h4>
+    <p>
+        {{values.desc}}
+    </p>
+    <p>
+        {{#each columns }}
+            <b>{{label}}</b> {{value}}<br/>
+        {{/each}}
+    </p>
+</template>
+
+<template name="projectUpdate">
+
+</template>
+
+<template name="projectDelete">
+
+</template>
+
+<template name="projectList">
+    <section class="row-fluid">
+        <div class="span8 offset2">
+            <h2>Project List</h2>
+            {{#each items }}
+                {{> projectListItem}}
+            {{/each}}
+        </div>
+    </section>
+</template>
+
+<template name="projectListItem">
+    <div class="">
+        <header>
+            Title: {{title}}<br/>
+            Author: {{author}}<br/>
+            Slug: {{slug}}<br/>
+        </header>
+        <p>
+            Desc: {{desc}}<br/>
+            Created: {{dateCreated}}<br/>
+            Modified: {{dateModified}}
+        </p>
+    </div>
+</template>
