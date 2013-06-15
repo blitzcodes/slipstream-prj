@@ -1,0 +1,13 @@
+{
+	"meteor"   : {
+		"git"    : "https://github.com/meteor/meteor.git",
+		"branch" : "master"
+	},
+	"packages" : {
+		"bootstrap-jasny" : {},
+		"router"          : {},
+		"slipstream"      : {
+			"path" : "/Users/seanhomer/slipstream/slipstream-mrt"
+		}
+	}
+}
