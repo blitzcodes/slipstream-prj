@@ -4,10 +4,10 @@
 		"branch" : "master"
 	},
 	"packages" : {
-		"bootstrap-jasny" : {},
 		"router"          : {},
+		"bootstrap-jasny" : {},
 		"slipstream"      : {
-			"path" : "/Users/seanhomer/slipstream/mrt"
+			"path":"/Users/seanhomer/slipstream/mrt"
 		}
 	}
 }

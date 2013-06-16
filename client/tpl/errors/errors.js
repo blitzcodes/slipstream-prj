@@ -1,13 +1,13 @@
+var tplList = Template["errorsList"];
 
-Template.errors.helpers({
+tplList.helpers({
 	errors : function () {
-		return Errors.find();
+		return Slipstream.Errors.find();
 	}
 });
-
-Template.error.rendered = function () {
+tplList.rendered = function () {
 	var error = this.data;
 	Meteor.defer(function () {
-		Errors.update(error._id, {$set : {seen : true}});
+		Slipstream.Errors.update(error._id, {$set : {seen : true}});
 	});
 };

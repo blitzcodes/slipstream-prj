@@ -1,12 +1,12 @@
-<template name="errors">
+<template name="errorsList">
   <div class="errors row-fluid">    
     {{#each errors}}
-      {{> error}}
+      {{> errorsListItem}}
     {{/each}}
   </div>
 </template>
 
-<template name="error">
+<template name="errorsListItem">
   <div class="alert alert-error">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     {{message}}
