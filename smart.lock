@@ -10,7 +10,8 @@
       "bootstrap-jasny": {},
       "slipstream": {
         "path": "../../../../slipstream/mrt"
-      }
+      },
+      "underscore-string": {}
     },
     "packages": {
       "router": {
@@ -25,6 +26,11 @@
       },
       "slipstream": {
         "path": "../../../../slipstream/mrt"
+      },
+      "underscore-string": {
+        "git": "https://github.com/possibilities/meteor-underscore-string.git",
+        "tag": "v2.2.0rc.1",
+        "commit": "dec21fac23310daf76dc19f246749e7beb48af03"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
