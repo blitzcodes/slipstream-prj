@@ -13,7 +13,7 @@ var tpls = Project.templates,
 	// Testing out chaining, if successful, greatly reduces the amount of placeholder code required per file!
 tplList.helpers({
 	items : function () {
-		return Project.find({}, {sort: {dateCreated:-1}});
+		return Project.find({}, {sort : {dateCreated : -1}});
 	}
 });
 tplList.events({

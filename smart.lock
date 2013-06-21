@@ -8,10 +8,11 @@
     "basePackages": {
       "router": {},
       "bootstrap-jasny": {},
+      "accounts-ui-bootstrap-dropdown": {},
+      "underscore-string": {},
       "slipstream": {
-        "path": "../../../../slipstream/mrt"
-      },
-      "underscore-string": {}
+        "path": "../../../slipstream/mrt"
+      }
     },
     "packages": {
       "router": {
@@ -24,13 +25,18 @@
         "tag": "v1.1.0",
         "commit": "8ef08074dbfb60c462432c50957604cbef3e976d"
       },
-      "slipstream": {
-        "path": "../../../../slipstream/mrt"
+      "accounts-ui-bootstrap-dropdown": {
+        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
+        "tag": "v0.1.3",
+        "commit": "42aa4d95070a2bd2aa200dcfd6c0edc69e3815c3"
       },
       "underscore-string": {
         "git": "https://github.com/possibilities/meteor-underscore-string.git",
         "tag": "v2.2.0rc.1",
         "commit": "dec21fac23310daf76dc19f246749e7beb48af03"
+      },
+      "slipstream": {
+        "path": "../../../slipstream/mrt"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",

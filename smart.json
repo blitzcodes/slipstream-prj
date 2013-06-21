@@ -1,14 +1,15 @@
 {
-  "meteor": {
-    "git": "https://github.com/meteor/meteor.git",
-    "branch": "master"
-  },
-  "packages": {
-    "router": {},
-    "bootstrap-jasny": {},
-    "slipstream": {
-      "path": "/Users/seanhomer/slipstream/mrt"
-    },
-    "underscore-string": {}
-  }
+	"meteor"   : {
+		"git"    : "https://github.com/meteor/meteor.git",
+		"branch" : "master"
+	},
+	"packages" : {
+		"router"          : {},
+		"bootstrap-jasny" : {},
+		"accounts-ui-bootstrap-dropdown" : {},
+		"underscore-string" : {},
+		"slipstream"      : {
+			"path":"/Users/sean/slipstream/mrt"
+		}
+	}
 }

@@ -6,10 +6,9 @@
 autopublish
 insecure
 preserve-inputs
-accounts-password
-accounts-ui-bootstrap-dropdown
 less
 bootstrap-jasny
 router
 slipstream
 underscore-string
+accounts-password
