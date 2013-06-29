@@ -6,12 +6,6 @@
             </header>
             <form id="projectsCreateForm">
                 <p>
-                    <b>All Inputs</b>
-                    {{#each inputs }}
-                        {{toHtml this}}
-                    {{/each}}
-                </p>
-                <p>
                     {{toHtml inputs.title}}<br />
                     {{toHtml inputs.desc}}
                 </p>
@@ -41,7 +35,23 @@
 </template>
 
 <template name="projectUpdate">
-
+    <section class="row-fluid">
+        <div class="span8 offset2">
+            <header>
+                Project Entry
+            </header>
+            <form id="projectsUpdateForm">
+                <p>
+                    {{toHtml inputs.title}}<br />
+                    {{toHtml inputs.desc}}
+                </p>
+                <p>
+                    <button id="btnSubmit" class="btn btn-primary">Create</button>
+                </p>
+            </form>
+            {{> errorsList}}
+        </div>
+    </section>
 </template>
 
 <template name="projectDelete">

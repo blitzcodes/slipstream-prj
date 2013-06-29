@@ -7,7 +7,7 @@ temp.created = function () {
 };
 temp.rendered = function () {
 	$(window).resize();
-	debug("Windows Refresh");
+//	debug("Windows Refresh");
 };
 temp.destroyed = function () {
 };

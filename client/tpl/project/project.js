@@ -1,4 +1,4 @@
-debug("/app/client/tpls/project/project.js");
+//debug("/app/client/tpls/project/project.js");
 
 var tpls = Project.templates,
 	tplList = tpls.List,
