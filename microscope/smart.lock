@@ -31,8 +31,8 @@
       },
       "slipstream": {
         "git": "https://github.com/blitzcodes/slipstream-mrt.git",
-        "tag": "v0.0.9.6",
-        "commit": "2539d0e31421732382737ff218eb3df8de8a42fb"
+        "tag": "v0.0.9.6.11",
+        "commit": "8ed5a862d127c24415768b72a1281ccd8a516546"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
