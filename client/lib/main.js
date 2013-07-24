@@ -1,1 +1,0 @@
-Session.set('settingsLoaded',true);
