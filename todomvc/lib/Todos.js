@@ -20,10 +20,12 @@ TodosUpdateEvents[okcancel_events('li.editing input.edit')] = make_okcancel_hand
 	}
 });
 
-var todosVoidCount = function (completed) {
-	if (_.isUndefined(completed))
-		completed = false;
-	return Todos.find({completed : completed}).count();
+var todosVoidCount = function () {
+	return function (completed) {
+		if (_.isUndefined(completed))
+			completed = false;
+		return Todos.find({completed : completed}).count();
+	}
 };
 
 Todos = Slipstream.Drift({
@@ -31,6 +33,11 @@ Todos = Slipstream.Drift({
 	options   : {
 		requireUserId : false,
 		scaffolding   : false
+	},
+	columns   : {
+		created_at : {
+
+		}
 	},
 	templates : {
 		app    : {
@@ -51,7 +58,7 @@ Todos = Slipstream.Drift({
 			events  : {
 				'click input#toggle-all' : function (evt) {
 					var completed = true;
-					if (!todosVoidCount) {
+					if (!todosVoidCount()) {
 						completed = false;
 					}
 					Todos.find({}).forEach(function (todo) {
@@ -108,16 +115,18 @@ Todos = Slipstream.Drift({
 		clearCompleted : function () {
 			Todos.remove({completed : true});
 		}
-	},
-	allow     : {
-		insert : function () {
-			return true;
-		},
-		update : function () {
-			return true;
-		},
-		remove : function () {
-			return true;
-		}
 	}
+//	,
+//	allow     : {
+//		insert : function () {
+//			return true;
+//		},
+//		update : function () {
+//			return true;
+//		},
+//		remove : function () {
+//			return true;
+//		}
+//	}
 });
+

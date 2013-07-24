@@ -7,8 +7,8 @@
     "packages": {
       "slipstream": {
         "git": "https://github.com/blitzcodes/slipstream-mrt.git",
-        "tag": "v0.0.9",
-        "commit": "f60b3041ec9f6a5e6fb3379062f8e2110ac5408b"
+        "tag": "v0.0.9.7",
+        "commit": "7afbed706b440148aa00a2fb33a4d4ccd9396137"
       },
       "HTML5-History-API": {
         "git": "https://github.com/tmeasday/meteor-HTML5-History-API.git",

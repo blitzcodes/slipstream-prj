@@ -5,6 +5,9 @@ filter_selections = {
 	completed : {completed : true}
 };
 
+// Get selector types as array
+filters = _.keys(filter_selections);
+
 // Returns an event_map key for attaching "ok/cancel" events to
 // a text input (given by selector)
 

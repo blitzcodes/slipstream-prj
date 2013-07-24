@@ -3,9 +3,6 @@
 // Session var to keep current filter type ("all", "active", "completed")
 Session.set('filter', 'all');
 
-// Get selector types as array
-var filters = _.keys(filter_selections);
-
 // Bind route handlers to filter types
 var routes = {};
 _.each(filters, function (filter) {
