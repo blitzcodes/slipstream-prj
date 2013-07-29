@@ -2,26 +2,26 @@
 // it is backed by a MongoDB collection named "players".
 
 Slipstream.defaults({
-	options : {
+	options   : {
 		requireUserId        : false,
 		useDefaultDateFields : false,
 		routesPluralized     : false,
 		scaffolding          : false
+	},
+	debugging : {
+		enabled : true,
+		session: false
 	}
 });
 
 Player = new Slipstream.Drift({
 	name      : 'player',
-	//	sessionReference : 'selected_player',
 	columns   : {
 		name  : {
 		},
 		score : {
 			updateMethod : '$inc'
 		}
-	},
-	debugging : {
-		enabled : true
 	},
 	templates : {
 		list : {
@@ -35,34 +35,23 @@ Player = new Slipstream.Drift({
 				}
 			},
 			events  : {
-				'click input.inc' : function () {
-					Player.update({_id : Player.sessionId()}, {$inc : {score : 5}});
+				'click input.inc' : function (e, t) {
+					//					Player.update({_id : Player.sessionId()}, {$inc : {score : 5}});
+					Player.templates.list.submitFormWithData(e, {
+						_id   : Player.sessionId(),
+						score : 5
+					});
 				}
 			}
 		},
 		view : {
 			helpers : {
 				selected : function () {
-					/*
-					 This should be a viable reactive way of handling this
-					 */
-					//return Player.sessionId() === this._id ? "selected" : '';
-
-					/*
-					 A cleaner method however to replicate how the original example functions, this will function wraps
-					 the sessionId in as Session.equals call back, returning the results here.
-					 */
 					return Player.sessionEquals(this._id) ? "selected" : '';
 				}
 			},
 			events  : {
 				'click' : function () {
-					/*
-					 To update the current session reference, all that is required is passing a new value into the
-					 .sessionId(id) function. As always, protection on what can be accessed by the session must reside
-					 in the allow/deny controls on the resulting methods when building a application, as the session is
-					 unsecured.
-					 */
 					Player.sessionId(this._id);
 				}
 			}
